@@ -5,8 +5,6 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-class ATank;
-
 UCLASS()
 class BATTLETANK_API ATankAIController : public AAIController
 {
@@ -14,6 +12,8 @@ class BATTLETANK_API ATankAIController : public AAIController
 	
 private:
 	virtual void Tick(float DeltaTime) override;
+	
+	float AcceptanceRadius = 3000.0f;
 
 public:
 	virtual void BeginPlay() override;	
